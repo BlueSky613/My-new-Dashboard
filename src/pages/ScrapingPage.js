@@ -32,8 +32,8 @@ export default function ScrapingPage() {
 
   return (
     <div className="pt-20 text-black scraping-page-background h-[85%]">
-      <div className="ml-36 flex flex-col gap-8 mt-20 font-bold text-xl">
-        <div className="grid grid-cols-4 items-center">
+      <div className="ml-36 flex flex-col gap-8 mt-20 font-bold text-2xl">
+        <div className="grid grid-cols-4 items-center font-seymour">
           <p>Website</p>
           <div className="flex justify-center">
             <button>Extraction</button>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Site = (props) => {
     const [isStarted, setIsStarted] = useState(props.isStarted);
   return (
-      <div className="grid grid-cols-4 items-center">
+      <div className="grid grid-cols-4 items-center font-secular">
         <p>{props.siteName}</p>
         <div className="flex justify-center">
           <div class="btn-conteiner" onClick={()=> setIsStarted(!isStarted)}>

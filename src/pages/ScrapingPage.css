@@ -196,7 +196,7 @@
     height: 20px;
     margin: 0 2px;
     border-radius: 4px;
-    animation: loader3 3s ease-in-out infinite;
+    animation: loader3 1.3s ease-in-out infinite;
   }
   
   .bar1 {
