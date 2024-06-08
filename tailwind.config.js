@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        seymour:["SeymourOne", 'Seymour One'],
+        secular:["SecularOne", 'Secular One'],
+        haken:["HankenGrotesk", 'HankenGrotesk']
+      }
+    },
   },
   plugins: [],
 }
