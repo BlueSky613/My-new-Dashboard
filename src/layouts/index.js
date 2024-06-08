@@ -1,25 +1,25 @@
-import React from "react";
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+// import pages
 import { Outlet } from "react-router-dom";
+import React from "react";
+
+import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Navbar';
+
+// ==============================|| MAIN LAYOUT ||============================== //
 
 const MainLayout = () => {
     return (
-        <>
-            <div className="md:left-[15%] w-3/4">
-                <Navbar/>
-                <Outlet/>
+        <div>
+            <div className="md:fixed md:w-[15%] md:h-screen  md:visible invisible h-0">
+                <Sidebar />
             </div>
-
-            <div className="w-1/4">
-                
-                <Sidebar/>
-
+            <div className="md:w-[85%] md:left-[15%] h-screen relative ">
+                <Navbar />
+                <Outlet />
+                {/* <Footer /> */}
             </div>
-           
-            
-        </>
+        </div>
     );
-};  
+};
 
 export default MainLayout;

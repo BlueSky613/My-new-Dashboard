@@ -2,13 +2,9 @@ import React from "react";
 
 const Navbar = () => {
     return (
-
-            <div className="w-full text-9xl">
-
-                <p> Navbar here ggfffffffgg</p>
-
-            </div>
-    
+        <div className="h-20 mt-6 font-bold text-white" >
+            <p className="mx-5 text-2xl">Scraping Page</p>
+        </div>
     );
 };  
 
