@@ -1,0 +1,6 @@
+.scraping-page-background {
+    /* background-image: linear-gradient( to top right, #06010f, #340c83 , #06010f, #4d1dad,#4d1dad, #130530, #130530); */
+    /* background: rgb(234, 234, 241); */
+    background: linear-gradient(30deg, #dacdfa 0%, rgb(255, 255, 255) 75%, #e0dbeb 100%);
+
+}
