@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
     const navigate = useNavigate();
     return (
-        <div className="bg-[#060b26] h-[95%] my-15 mx-2 flex flex-col items-center text-center rounded-[32px]">
+        <div className="bg-[#060b26] h-[92%] my-5 mx-2 flex flex-col items-center text-center rounded-[32px]">
             <div className="flex items-center justify-center mt-16 mb-5">
                 <img src="Dallas Mavericks Mavs.png" alt="" width="70px" />
                 <div className="text-white">Product Dashboard</div>
