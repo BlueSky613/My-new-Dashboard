@@ -10,7 +10,7 @@ const Site = (props) => {
     // var shell = new ActiveXObject("WScript.Shell");
     // var path = `${funcName}/${funcName}.bat`;
     // shell.run(path,1,false);
-    
+    // shell.run(path,1,true);
     }
   };
   return (
