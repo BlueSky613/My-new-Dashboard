@@ -10,6 +10,7 @@ export default function ScrapingPage() {
     {
       siteName: "Tugo",
       isStarted: false,
+      funcNmae:"Tugo"
     },
     {
       siteName: "Aristas",
@@ -42,7 +43,7 @@ export default function ScrapingPage() {
           <button>Results</button>
         </div>
         {siteArray.map((item, index) => (
-          <Site siteName={item.siteName} isStarted={item.isStarted} id = {index}/>
+          <Site siteName={item.siteName} isStarted={item.isStarted} id = {index} funcName = {item.funcName}/>
         ))}
       </div>
     </div>
