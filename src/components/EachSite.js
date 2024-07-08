@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-
+import axios from 'axios';
 
 const Site = (props) => {
   const [isStarted, setIsStarted] = useState(props.isStarted);
   const handleClick = (funcName) => {
     setIsStarted(!isStarted);
     if (isStarted == false) {
-    //   window.open(`file:///${funcName}/${funcName}.bat`);
-    // var shell = new ActiveXObject("WScript.Shell");
-    // var path = `${funcName}/${funcName}.bat`;
-    // shell.run(path,1,false);
-    // shell.run(path,1,true);
+      print ("Start_Scraping_Download")
     }
   };
   return (
