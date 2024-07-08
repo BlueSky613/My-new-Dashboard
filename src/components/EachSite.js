@@ -7,6 +7,12 @@ const Site = (props) => {
     setIsStarted(!isStarted);
     if (isStarted == false) {
       print ("Start_Scraping_Download")
+      console.log("Start_Scraping_False")
+    }
+    if (isStarted == true) {
+      print ("Start_Scraping_Download")
+      console.log("Start_Scraping_True")
+      //
     }
   };
   return (
