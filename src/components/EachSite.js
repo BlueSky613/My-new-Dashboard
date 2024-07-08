@@ -12,6 +12,7 @@ const Site = (props) => {
     if (isStarted == true) {
       print ("Start_Scraping_Download")
       console.log("Start_Scraping_True")
+      //
     }
   };
   return (
