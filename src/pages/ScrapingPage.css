@@ -5,7 +5,7 @@
 
 }
 
-.btn-conteiner {
+.btn-container {
   display: flex;
   justify-content: center;
   --color-text: #ffffff;

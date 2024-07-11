@@ -1,32 +1,46 @@
 import React, { useState } from "react";
 import axios from 'axios';
 
+
 const Site = (props) => {
   const [isStarted, setIsStarted] = useState(props.isStarted);
-  const handleClick = (funcName) => {
+
+  const downloadCsv = async () => {
+    const response = await axios.get('http://localhost:5000/api_tugo', { responseType: 'blob' });
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'Scraping_data_Download.csv');
+    document.body.appendChild(link);
+    link.click();
+    setIsStarted(false);
+  };
+  ////
+  const handleClick = () => {
     setIsStarted(!isStarted);
     if (isStarted == false) {
-      print ("Start_Scraping_Download")
       console.log("Start_Scraping_False")
+      downloadCsv()
+      
     }
-    if (isStarted == true) {
-      print ("Start_Scraping_Download")
-      console.log("Start_Scraping_True")
-      //
-    }
+
+    // if (isStarted == true) {
+    //   console.log("Start_Scraping_True")
+
+    // }
   };
   return (
     <div className="grid grid-cols-4 items-center font-secular">
       <p>{props.siteName}</p>
       <div className="flex justify-center">
-        <div class="btn-conteiner" onClick={handleClick}>
-          <a class="btn-content" href="#">
+        <div className="btn-container" onClick={handleClick}>
+          <a className="btn-content" href="#">
             {isStarted === false ? (
-              <span class="btn-title">START</span>
+              <span className="btn-title">START</span>
             ) : (
-              <span class="btn-title">STOP</span>
+              <span className="btn-title">STOP</span>
             )}
-            <span class="icon-arrow">
+            <span className="icon-arrow">
               <svg
                 width="66px"
                 height="43px"
@@ -37,9 +51,9 @@ const Site = (props) => {
                 <g
                   id="arrow"
                   stroke="none"
-                  stroke-width="1"
+                  strokeWidth="1"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 >
                   <path
                     id="arrow-icon-one"
@@ -67,24 +81,24 @@ const Site = (props) => {
           <div></div>
         ) : (
           <div className="flex">
-            <div class="bars bar1"></div>
-            <div class="bars bar2"></div>
-            <div class="bars bar3"></div>
-            <div class="bars bar4"></div>
-            <div class="bars bar5"></div>
-            <div class="bars bar6"></div>
-            <div class="bars bar7"></div>
-            <div class="bars bar8"></div>
-            <div class="bars bar9"></div>
-            <div class="bars bar10"></div>
+            <div className="bars bar1"></div>
+            <div className="bars bar2"></div>
+            <div className="bars bar3"></div>
+            <div className="bars bar4"></div>
+            <div className="bars bar5"></div>
+            <div className="bars bar6"></div>
+            <div className="bars bar7"></div>
+            <div className="bars bar8"></div>
+            <div className="bars bar9"></div>
+            <div className="bars bar10"></div>
           </div>
         )}
       </div>
       <div className="flex justify-center">
-        <button class="Documents-btn">
-          <span class="folderContainer">
+        <button className="Documents-btn">
+          <span className="folderContainer">
             <svg
-              class="fileBack"
+              className="fileBack"
               width="146"
               height="113"
               viewBox="0 0 146 113"
@@ -104,13 +118,13 @@ const Site = (props) => {
                   y2="95.4804"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#8F88C2"></stop>
-                  <stop offset="1" stop-color="#5C52A2"></stop>
+                  <stop stopColor="#8F88C2"></stop>
+                  <stop offset="1" stopColor="#5C52A2"></stop>
                 </linearGradient>
               </defs>
             </svg>
             <svg
-              class="filePage"
+              className="filePage"
               width="88"
               height="99"
               viewBox="0 0 88 99"
@@ -131,14 +145,14 @@ const Site = (props) => {
                   y2="160.5"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="white"></stop>
-                  <stop offset="1" stop-color="#686868"></stop>
+                  <stop stopColor="white"></stop>
+                  <stop offset="1" stopColor="#686868"></stop>
                 </linearGradient>
               </defs>
             </svg>
 
             <svg
-              class="fileFront"
+              className="fileFront"
               width="160"
               height="79"
               viewBox="0 0 160 79"
@@ -158,13 +172,13 @@ const Site = (props) => {
                   y2="82.8317"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#C3BBFF"></stop>
-                  <stop offset="1" stop-color="#51469A"></stop>
+                  <stop stopColor="#C3BBFF"></stop>
+                  <stop offset="1" stopColor="#51469A"></stop>
                 </linearGradient>
               </defs>
             </svg>
           </span>
-          <p class="text">Documents</p>
+          <p className="text">Documents</p>
         </button>
       </div>
     </div>
