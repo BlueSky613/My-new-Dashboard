@@ -15,7 +15,7 @@ const Site = (props) => {
     link.click();
     setIsStarted(false);
   };
-  ////
+  //
   const handleClick = () => {
     setIsStarted(!isStarted);
     if (isStarted == false) {
